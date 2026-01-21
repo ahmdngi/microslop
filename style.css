@@ -1,0 +1,191 @@
+/* MICROSLOP — BRUTALIST / CYBERPUNK CSS */
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ROOT */
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --accent: #0078D4; /* Microsoft Blue */
+  --warning: #d40000;
+  --border-heavy: 6px;
+  --border-ultra: 10px;
+  --font-main: Helvetica, Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-main);
+  line-height: 1.4;
+}
+
+/* HERO */
+.hero {
+  border-bottom: var(--border-ultra) solid var(--fg);
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.subhead {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-left: var(--border-heavy) solid var(--fg);
+  padding-left: 1rem;
+}
+
+/* COUNTER */
+.counter {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: var(--border-heavy) solid var(--fg);
+}
+
+.counter .label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.counter-value {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* CONTENT */
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* MANIFEST */
+.manifest h2,
+.report h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  border-bottom: var(--border-heavy) solid var(--fg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  border: var(--border-heavy) solid var(--fg);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+.card .tag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-left: var(--border-heavy) solid var(--fg);
+  border-bottom: var(--border-heavy) solid var(--fg);
+}
+
+/* REPORT */
+.report {
+  margin-top: 5rem;
+}
+
+.instructions {
+  font-family: var(--font-mono);
+  margin-bottom: 2rem;
+}
+
+form {
+  border: var(--border-ultra) solid var(--fg);
+  padding: 2rem;
+  font-family: var(--font-mono);
+}
+
+label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: var(--border-heavy) solid var(--fg);
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  background: var(--fg);
+  color: var(--bg);
+  border: var(--border-heavy) solid var(--fg);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  border-top: var(--border-ultra) solid var(--fg);
+  font-family: var(--font-mono);
+  text-align: center;
+  font-size: 0.85rem;
+}

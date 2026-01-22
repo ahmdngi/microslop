@@ -65,7 +65,7 @@ function initializeForm() {
         const email = form.querySelector('input[name="email"]');
         const description = form.querySelector('textarea[name="description"]');
         
-        if (!email.value || !description.value) {
+        if (!description.value) {
             e.preventDefault();
             alert('Please fill in all required fields.');
             return;

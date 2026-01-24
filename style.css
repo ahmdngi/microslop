@@ -657,3 +657,19 @@ a:hover {
     text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
     color: #60a5fa !important;
 }
+
+/* Specialized Status Button for Hero Section */
+.btn-status {
+    text-decoration: none;
+    display: inline-block;
+    background: transparent !important;
+    border: 1px solid #3b82f6 !important;
+    color: #3b82f6 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-status:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}

@@ -618,3 +618,42 @@ a:hover {
 * {
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
+
+/* Status Link Highlight & Pulse */
+.nav-link.status-highlight {
+    position: relative;
+    color: #3b82f6 !important; /* Microslop Blue */
+    font-weight: 700;
+}
+
+.nav-link.status-highlight::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+/* Optional: Hover effect to make it feel tactile */
+.nav-link.status-highlight:hover {
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    color: #60a5fa !important;
+}
